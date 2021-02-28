@@ -1,3 +1,4 @@
+![img-msvc16-config](https://user-images.githubusercontent.com/48203467/109415963-e3a4b680-79bb-11eb-9a2d-28a026cb3955.png)
 # Building-ViSP3-with-Visual-Studio-from-source-on-Windows
 In this tutorial I will show yow how to install ViSP from source on Windows 10 with Visual C++. These steps have been tested on Windows 10 (64 bit), with CMake 3.19.4 and Visual Studio Community 2019.
 
