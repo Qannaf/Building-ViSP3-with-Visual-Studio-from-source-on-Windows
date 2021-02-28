@@ -25,16 +25,55 @@ Install Git for Windows from https://git-for-windows.github.io/. This installati
 
 4.PCL 1.10.0
 ------------
-In this link I show yow how to install ViSP from source on Windows 10 with Visual C++.
+In this link I show yow how to install PCL from source on Windows 10 with Visual C++.
 https://github.com/Qannaf/Building-PCL-with-Visual-Studio-from-source-on-Windows/blob/main/PCL1.10.0.md
 
 5.OpenCV
 --------
-Once you have saved the file, follow the blog for further instructions on How to Install OpenCV through this Link
+In this link I show yow how to install OpenCV on Windows 10 with Visual C++/Python.
+https://github.com/Qannaf/Building-OpenCV-with-Visual-Studio-from-source-on-Windows/blob/main/OpenCV.md
 
-OpenCV Version	Visual Studio 16	Visual Studio 15	Visual Studio 14
-OpenCV-4.5.1	OpenCV-4.5.1-vc16.exe	OpenCV-4.5.1-vc15.exe	OpenCV-4.5.1-vc14.exe
-OpenCV-4.5.0	OpenCV-4.5.0-vc16.exe	OpenCV-4.5.0-vc15.exe	OpenCV-4.5.0-vc14.exe
-OpenCV-4.4.0	OpenCV-4.4.0-vc16.exe	OpenCV-4.4.0-vc15.exe	OpenCV-4.4.0-vc14.exe
-OpenCV-4.1.0	OpenCV-4.1.0-vc16.exe	OpenCV-4.1.0-vc15.exe	OpenCV-4.1.0-vc14.exe
+# Download ViSP3.3 source code : 
+--------
+1. Clone ViSP3.3 from Git.
+https://github.com/lagadic/visp.git
+
+
+CMake  
+-----
+Launch CMake (cmake-gui) and complete the source code and binaries location as in the next image 
+1. Specify the input destination of the source code and the output destination of the solution file. 
+    * **Where is the source code:**         C:\ViSP3.30  
+    * **Where is build the binaries:**      C:\ViSP3.30\build
+![1](https://user-images.githubusercontent.com/48203467/109418576-6d0eb580-79c9-11eb-98b5-d06670faddad.png)
+Select then your compiler "Visual Studio 16 2019" and click on "Finish" button
+![2](https://user-images.githubusercontent.com/48203467/109418590-80218580-79c9-11eb-926c-c0e8af915190.png)
+This will start CMake configuration
+
+
+5. [Generate]Press to output the solution file。  
+
+Build  
+-----
+1.Start Visual Studio with administrator privileges and PCL solution file(C:\ViSP3.30\build\VISP.sln) Open   
+   (INSTALL fails unless Visual Studio is started with administrator privileges)  
+   
+3. Install PCL. (INSTALL)
+     1. Select the INSTALL project from Solution Explorer.
+     2. Press Build> Project Only> Build INSTALL Only to install PCL.
+        The necessary files are copied to the output destination specified by ** CMAKE_INSTALL_PREFIX **. 
+
+
+Environment Variable  
+--------------------
+1. Create the environment variable ** VISP_DIR ** and set the PCL path (C:\ViSP3.30\install).
+
+2. Add the path of PCL and 3rd Party to the environment variable ** Path **.  
+    * %VISP_WS%\install\x64\vc16\bin 
+   
+
+
+
+
+
 
