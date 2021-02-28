@@ -46,21 +46,31 @@ Launch CMake (cmake-gui) and complete the source code and binaries location as i
     * **Where is the source code:**         C:\ViSP3.30  
     * **Where is build the binaries:**      C:\ViSP3.30\build
 ![1](https://user-images.githubusercontent.com/48203467/109418576-6d0eb580-79c9-11eb-98b5-d06670faddad.png)
-Select then your compiler "Visual Studio 16 2019" and click on "Finish" button
+
+2. Select then your compiler "Visual Studio 16 2019" and click on "Finish" button                                     
 ![2](https://user-images.githubusercontent.com/48203467/109418590-80218580-79c9-11eb-926c-c0e8af915190.png)
 This will start CMake configuration
 
+3. [Configure] This will start CMake configuration. As shown in the next image, Eigen3
+![3](https://user-images.githubusercontent.com/48203467/109418999-713bd280-79cb-11eb-9556-0af9bc749189.png)
 
-5. [Generate]Press to output the solution file。  
+4. [Generate]Press to output the solution file
+
+ 
 
 Build  
 -----
 1.Start Visual Studio with administrator privileges and PCL solution file(C:\ViSP3.30\build\VISP.sln) Open   
    (INSTALL fails unless Visual Studio is started with administrator privileges)  
    
-3. Install PCL. (INSTALL)
+2. Build ViSP (ALL_BUILD)
+  1. Set the solution configuration (Release).
+  2. Select the ALL_BUILD project from Solution Explorer.
+  3. Press Build> Build Solution to build the ViSP.
+
+3. Install ViSP (INSTALL)
      1. Select the INSTALL project from Solution Explorer.
-     2. Press Build> Project Only> Build INSTALL Only to install PCL.
+     2. Press Build> Project Only> Build INSTALL Only to install ViSP.
         The necessary files are copied to the output destination specified by ** CMAKE_INSTALL_PREFIX **. 
 
 
